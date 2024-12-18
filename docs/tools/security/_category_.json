@@ -1,0 +1,8 @@
+{
+    "label": "Security related tools",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "Pentest, attack, defense tools will be listed here"
+    }
+  }
