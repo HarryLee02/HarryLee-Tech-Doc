@@ -12,10 +12,10 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'HarryLee Tech Doc',
   tagline: 'IT is cool',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://harrylee02.github.io',
+  url: 'https://harrylee.id.vn',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/HarryLee-Tech-Doc/',
@@ -43,10 +43,11 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/HarryLee02/HarryLee-Tech-Doc/tree/main/',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true
         },
         blog: {
           showReadingTime: true,
@@ -54,10 +55,9 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/HarryLee02/HarryLee-Tech-Doc/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -73,13 +73,95 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        // The application ID provided by Algolia
+        appId: '49S98L4BDP',
+  
+        // Public API key: it is safe to commit it
+        apiKey: '5e5f185c29d87f859bed0d8b0ffa2315',
+  
+        indexName: 'harrylee02io',
+
+        placeholder: 'Search for HarryLee\'s Doc',
+
+        translations:{
+          button: {
+            buttonText: 'Search',
+            buttonAriaLabel: 'Search',
+          },
+          modal: {
+            searchBox: {
+              resetButtonTitle: 'Clear the query',
+              resetButtonAriaLabel: 'Clear the query',
+              cancelButtonText: 'Cancel',
+              cancelButtonAriaLabel: 'Cancel',
+              searchInputLabel: 'Search',
+            },
+            startScreen: {
+              recentSearchesTitle: 'Recent',
+              noRecentSearchesText: 'No recent searches',
+              saveRecentSearchButtonTitle: 'Save this search',
+              removeRecentSearchButtonTitle: 'Remove this search from history',
+              favoriteSearchesTitle: 'Favorite',
+              removeFavoriteSearchButtonTitle: 'Remove this search from favorites',
+            },
+            errorScreen: {
+              titleText: 'Unable to fetch results',
+              helpText: 'You might want to check your network connection.',
+            },
+            footer: {
+              selectText: 'to select',
+              selectKeyAriaLabel: 'Enter key',
+              navigateText: 'to navigate',
+              navigateUpKeyAriaLabel: 'Arrow up',
+              navigateDownKeyAriaLabel: 'Arrow down',
+              closeText: 'to close',
+              closeKeyAriaLabel: 'Escape key',
+              searchByText: 'Search by',
+            },
+            noResultsScreen: {
+              noResultsText: 'No results for',
+              suggestedQueryText: 'Try searching for',
+              reportMissingResultsText: 'Believe this query should return results?',
+              reportMissingResultsLinkText: 'Let us know.',
+            },
+          },
+        },
+        getMissingResultsUrl({ query }) {
+          return `https://github.com/algolia/docsearch/issues/new?title=${query}`;
+        },
+  
+        // Optional: see doc section below
+        contextualSearch: true,
+  
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        // externalUrlRegex: 'external\\.com|domain\\.com',
+  
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        // replaceSearchResultPathname: {
+        //   from: '/docs/', // or as RegExp: /\/docs\//
+        //   to: '/',
+        // },
+
+        searchParameters: {},
+
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: 'search',
+
+      // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+      insights: false
+      
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'My Site',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Site Logo',
+          src: 'img/logo/logo.svg',
+          srcDark: 'img/logo/logo_dark.svg',
+          target: '_self',
+          href: 'https://harrylee.id.vn/HarryLee-Tech-Doc/',
         },
         items: [
           {
@@ -90,12 +172,21 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/HarryLee02/HarryLee-Tech-Doc',
-            // label: 'GitHub',
-            position: 'right',
-            className: 'navbar--github-link'
+            to: 'https://www.linkedin.com/in/hieule-harrylee/',
+            label: 'LinkedIn',
+            className: 'header-linkedin-link',
+            target: '_blank',
+            position: 'right'
+          },
+          {
+            to: 'https://github.com/HarryLee02/HarryLee-Tech-Doc',
+            label: 'GitHub',
+            className: 'header-github-link',
+            target: '_blank',
+            position: 'right'
           },
         ],
+        hideOnScroll: true
       },
       footer: {
         style: 'dark',
@@ -116,10 +207,7 @@ const config = {
                 label: 'Stack Overflow',
                 href: 'https://stackoverflow.com/users/22062015/lillee',
               },
-              // {
-              //   label: 'Discord',
-              //   href: 'https://discordapp.com/invite/docusaurus',
-              // },
+              
               {
                 label: 'Carrd.co',
                 href: 'https://harrylee02.carrd.co/',
@@ -140,6 +228,12 @@ const config = {
             ],
           },
         ],
+        logo: {
+          alt: 'HarryLee Logo',
+          src: 'img/logo/harrylee_logo_default.svg',
+          href: 'https://harrylee02.carrd.co/',
+          target: '_blank',
+        },
         copyright: `Copyright © ${new Date().getFullYear()} HarryLee Project, Inc. Built with Docusaurus.`,
       },
       prism: {
