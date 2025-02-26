@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 # Họp xét ĐRL
-Lớp ATTT2022.1 tổ chức cuộc họp trực tuyến để xét điểm rèn luyện và giải đáp các thắc mắc trong việc chuẩn bị cho năm học mới.
+Lớp ATTT2022.2 tổ chức cuộc họp trực tuyến để xét điểm rèn luyện và giải đáp các thắc mắc trong việc chuẩn bị cho năm học mới.
 
 ## Điểm rèn luyện
 Hiện tại điểm rèn luyện đã được cập nhật trên https://drl.uit.edu.vn/, các bạn vui lòng kiểm tra kĩ các thông tin, nếu có sai sót phải báo ngay cho lớp trưởng trước ngày **`28/2/2025`** để kịp thời giải quyết.
@@ -10,12 +10,13 @@ Hiện tại điểm rèn luyện đã được cập nhật trên https://drl.u
 Điểm rèn luyện của lớp hiện tại (tạm tính tới sáng 25/2/2025):
 |              | Số lượng  |
 |---           |    ---    |
-|**Xuất sắc**  |    34     |
-|**Tốt**       |    18     |
-|**Khá**       |    18     |
-|**Trung bình**|    3      |
+|**Xuất sắc**  |    33     |
+|**Tốt**       |    20     |
+|**Khá**       |    10     |
+|**Trung bình**|    2      |
+|**Kém**       |    1      |
 
-Ngoài ra có 7 suất sinh viên hoàn thành xuất sắc nhiệm vụ dược giao, nếu không ai tự ứng cử thì lớp trưởng sẽ tự đề cử
+Ngoài ra có 10% suất sinh viên hoàn thành xuất sắc nhiệm vụ dược giao, nếu không ai tự ứng cử thì lớp trưởng sẽ tự đề cử
 
 ## Anh văn
 
@@ -65,3 +66,7 @@ Các link liên quan:
 3. https://mmt.uitiot.vn
 
 4. https://student.uit.edu.vn/sinhvien/dangky-totnghiep
+
+5. https://nc.uit.edu.vn/
+
+6. https://thuvien.uit.edu.vn/
