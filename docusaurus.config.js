@@ -75,12 +75,12 @@ const config = {
     ({
       algolia: {
         // The application ID provided by Algolia
-        appId: '49S98L4BDP',
-  
+        appId: 'VFD0G7AXZF',
+        // 49S98L4BDP: harrylee02io
         // Public API key: it is safe to commit it
-        apiKey: '5e5f185c29d87f859bed0d8b0ffa2315',
-  
-        indexName: 'harrylee02io',
+        apiKey: '5293836a48fa23d02e460467042115cc',
+        // 5e5f185c29d87f859bed0d8b0ffa2315 harrylee02io
+        indexName: 'harrylee-id',
 
         placeholder: 'Search for HarryLee\'s Doc',
 
@@ -155,7 +155,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'HarryLee\'s Tech Doc',
         logo: {
           alt: 'Site Logo',
           src: 'img/logo/logo.svg',
@@ -168,7 +168,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documents',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
