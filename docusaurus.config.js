@@ -15,10 +15,10 @@ const config = {
   favicon: 'img/favicon/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://harrylee.id.vn',
+  url: 'https://docs.harrylee.id.vn',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/HarryLee-Tech-Doc/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -42,6 +42,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: './sidebars.js',
           
           editUrl:
@@ -49,20 +50,27 @@ const config = {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
+        
+        // to deploy docs only
+        blog: false,
 
-          editUrl:
-            'https://github.com/HarryLee02/HarryLee-Tech-Doc/tree/main/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        // to deploy with blog
+
+        // blog: {
+        //   showReadingTime: true,
+        //   feedOptions: {
+        //     type: ['rss', 'atom'],
+        //     xslt: true,
+        //   },
+
+        //   editUrl:
+        //     'https://github.com/HarryLee02/HarryLee-Tech-Doc/tree/main/',
+        //   // Useful options to enforce blogging best practices
+        //   onInlineTags: 'warn',
+        //   onInlineAuthors: 'warn',
+        //   onUntruncatedBlogPosts: 'warn',
+        // }
+        
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -170,7 +178,7 @@ const config = {
             position: 'left',
             label: 'Documents',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             to: 'https://www.linkedin.com/in/hieule-harrylee/',
             label: 'LinkedIn',
@@ -196,7 +204,8 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                // to: '/docs/intro',
+                to: "/intro"
               },
             ],
           },
@@ -217,10 +226,10 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
               {
                 label: 'GitHub',
                 href: 'https://github.com/HarryLee02/HarryLee-Tech-Doc',
