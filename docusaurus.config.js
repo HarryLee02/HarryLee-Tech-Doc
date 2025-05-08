@@ -23,7 +23,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'HarryLee02', // Usually your GitHub org/user name.
-  projectName: 'HarryLee-Tech-Doc', // Usually your repo name.
+  // projectName: 'HarryLee-Tech-Doc', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -169,7 +169,7 @@ const config = {
           src: 'img/logo/logo.svg',
           srcDark: 'img/logo/logo_dark.svg',
           target: '_self',
-          href: 'https://harrylee.id.vn/HarryLee-Tech-Doc/',
+          href: 'https://docs.harrylee.id.vn/',
         },
         items: [
           {
